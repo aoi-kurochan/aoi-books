@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-07-04",
+  "updated": "2026-07-10",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -8,7 +8,8 @@
     "画像生成",
     "note",
     "占い・英語",
-    "働き方・FIRE"
+    "働き方・FIRE",
+    "AI副業"
   ],
   "books": [
     {
@@ -361,6 +362,19 @@
       "published": null,
       "visible": true,
       "cover": "covers/27.jpg"
+    },
+    {
+      "order": 28,
+      "title": "初めてのBrainが100万円売れた私の話",
+      "entry": "AI副業",
+      "pick": "最初の1冊",
+      "top": false,
+      "blurb": "初めて高単価教材を出すまでの記録",
+      "url": "https://www.amazon.co.jp/dp/B0H87WX13W",
+      "asin": "B0H87WX13W",
+      "published": null,
+      "visible": true,
+      "cover": "covers/28.jpg"
     }
   ]
 }
