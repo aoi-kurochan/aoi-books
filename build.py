@@ -40,7 +40,14 @@ parts = []
 parts.append(f'''<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>あおいの本棚｜次に読む1冊が見つかる</title>
-<meta name="description" content="AIアイデア工房の本を、テーマ別に選べる読者向けブックガイド。">
+<meta name="description" content="黒川葵の本を、テーマ別に選べるブックガイド。">
+<meta property="og:title" content="あおいの本棚｜次に読む1冊が見つかる">
+<meta property="og:description" content="黒川葵の本を、テーマ別に選べるブックガイド。">
+<meta property="og:image" content="https://aoi-kurochan.github.io/aoi-books/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aoi-kurochan.github.io/aoi-books/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head><body>
