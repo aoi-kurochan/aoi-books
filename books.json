@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-07-10",
+  "updated": "2026-07-26",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -375,6 +375,32 @@
       "published": null,
       "visible": true,
       "cover": "covers/28.jpg"
+    },
+    {
+      "order": 29,
+      "title": "はじめてのKindle出版 30のQ&A",
+      "entry": "Kindle出版",
+      "pick": null,
+      "top": false,
+      "blurb": "出す前の不安に答えるQ&A集",
+      "url": "https://www.amazon.co.jp/dp/B0HBC3X87M",
+      "asin": "B0HBC3X87M",
+      "published": null,
+      "visible": true,
+      "cover": "covers/29.jpg"
+    },
+    {
+      "order": 30,
+      "title": "いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた",
+      "entry": "AIツールの基本",
+      "pick": null,
+      "top": false,
+      "blurb": "Codexで業務改善アプリを自作",
+      "url": "https://www.amazon.co.jp/dp/B0H98G9SQ9",
+      "asin": "B0H98G9SQ9",
+      "published": null,
+      "visible": true,
+      "cover": "covers/30.jpg"
     }
   ]
 }
