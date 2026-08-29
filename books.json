@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-08-09",
+  "updated": "2026-08-29",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -427,6 +427,32 @@
       "published": null,
       "visible": true,
       "cover": "covers/32.jpg"
+    },
+    {
+      "order": 33,
+      "title": "Claude CodeでYouTube動画を作ってみた",
+      "entry": "Claude活用",
+      "pick": null,
+      "top": false,
+      "blurb": "顔出し・声出しなしで動画を作る",
+      "url": "https://aoi-kurochan.com/l/u/kbook_35",
+      "asin": "B0GX2ZSXZ9",
+      "published": null,
+      "visible": true,
+      "cover": "covers/33.jpg"
+    },
+    {
+      "order": 34,
+      "title": "ChatGPT Workで業務をとことん自動化してみた",
+      "entry": "AIツールの基本",
+      "pick": null,
+      "top": false,
+      "blurb": "面倒な業務をAIにとことん任せる",
+      "url": "https://aoi-kurochan.com/l/u/kbook_36",
+      "asin": "B0HGZ16CXQ",
+      "published": null,
+      "visible": true,
+      "cover": "covers/34.jpg"
     }
   ]
 }
