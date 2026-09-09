@@ -1,271 +1,469 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>あおいの本棚｜次に読む1冊が見つかる</title>
-<meta name="description" content="黒川葵の本を、テーマ別に選べるブックガイド。">
+<meta name="description" content="黒川葵の本を、やりたいことや使いたいAIから選べるブックガイド。">
 <meta property="og:title" content="あおいの本棚｜次に読む1冊が見つかる">
-<meta property="og:description" content="黒川葵の本を、テーマ別に選べるブックガイド。">
+<meta property="og:description" content="黒川葵の本を、やりたいことや使いたいAIから選べるブックガイド。">
 <meta property="og:image" content="https://aoi-kurochan.github.io/aoi-books/ogp.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://aoi-kurochan.github.io/aoi-books/ogp.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head><body>
-<header class="hero"><div class="wrap">
-<p class="brand">あおいの本棚</p>
-<h1>次に読む1冊が、<br>ここから見つかります。</h1>
-<p class="lead">今のあなたに近いテーマを選んでください。<br class="sp">表紙をタップすると、そのままAmazonのページに飛べます。</p>
-<nav class="entries" aria-label="テーマから選ぶ">
-<a class="entry-btn" href="#e1"><strong>Kindle出版</strong><span>出版で収入を作る</span></a>
-<a class="entry-btn" href="#e2"><strong>Claude活用</strong><span>話題のClaudeを使いこなす</span></a>
-<a class="entry-btn" href="#e3"><strong>AIツールの基本</strong><span>ChatGPT・NotebookLM・Obsidian</span></a>
-<a class="entry-btn" href="#e4"><strong>画像生成</strong><span>AIで絵・漫画・サムネ</span></a>
-<a class="entry-btn" href="#e5"><strong>note</strong><span>書く習慣から始める</span></a>
-<a class="entry-btn" href="#e6"><strong>占い・英語</strong><span>得意を副業にする</span></a>
-<a class="entry-btn" href="#e7"><strong>働き方・FIRE</strong><span>会社に頼らない人生</span></a>
-<a class="entry-btn" href="#e8"><strong>AI副業</strong><span>AIで新しい収入をつくる</span></a>
-</nav></div></header>
-<section class="tone wrap-outer"><div class="wrap"><h2>今のあなたにおすすめ</h2><p class="tagline">はじめての方は、この3冊から。</p><div class="pick-row">
-<a class="pick-card" data-title="ChatGPTを使って７日でKindle出版！" href="https://x.gd/YlNGJ" target="_blank" rel="noopener">
-<img src="covers/01.jpg" alt="ChatGPTを使って７日でKindle出版！ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">まず読む1冊</span>
-<h3>ChatGPTを使って７日でKindle出版！</h3><p>7日で作家デビューする手順書</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Claudeって、そもそも何？" href="https://x.gd/reg2g" target="_blank" rel="noopener">
-<img src="covers/04.jpg" alt="Claudeって、そもそも何？ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>Claudeって、そもそも何？</h3><p>Claudeの全体像がまずわかる</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Kindle出版始めたら6ヶ月でFIREできた私の話" href="https://x.gd/Wg3fs" target="_blank" rel="noopener">
-<img src="covers/25.jpg" alt="Kindle出版始めたら6ヶ月でFIREできた私の話 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">深める1冊</span>
-<h3>Kindle出版始めたら6ヶ月でFIREできた私の話</h3><p>副業出版のリアルな体験記</p><span class="go">Amazonで見る →</span></div></a>
+<header class="hero"><div class="paper-noise"></div><div class="wrap hero-grid">
+  <div class="hero-copy">
+    <p class="brand"><span>✦</span> あおいの本棚</p>
+    <p class="eyebrow">BOOK GUIDE BY AOI KUROKAWA</p>
+    <h1>次に読む1冊を<br><em>選べます。</em></h1>
+    <p class="lead">やりたいことや、使いたいAIから選んでください。<br>今のあなたに合う本をご案内します。</p>
+    <a class="hero-cta" href="#guide">やりたいことから選ぶ <span>↓</span></a>
+  </div>
+  <div class="hero-books" aria-label="本棚の一部">
+    <span class="halo"></span>
+    <img class="cover cover-a" src="covers/33.jpg" alt="">
+    <img class="cover cover-b" src="covers/34.jpg" alt="">
+    <img class="cover cover-c" src="covers/25.jpg" alt="">
+  </div>
+</div></header>
+
+<main id="guide">
+<section class="guide wrap">
+  <div class="section-intro">
+    <p class="section-label">FIND YOUR NEXT BOOK</p>
+    <h2>何を始めたいですか？</h2>
+    <p>テーマ名ではなく、今の目的に近いものを選んでください。</p>
+  </div>
+  <nav class="goal-grid" aria-label="やりたいことから選ぶ">
+<a class="goal-card goal-publish" href="#publish">
+      <span class="goal-number">01</span>
+      <strong>本を出版したい</strong><small>書きたい気持ちを、1冊の形にする</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+<a class="goal-card goal-learn" href="#learn">
+      <span class="goal-number">02</span>
+      <strong>AIを学びたい</strong><small>ChatGPTやClaudeの基本をやさしく知る</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+<a class="goal-card goal-work" href="#work">
+      <span class="goal-number">03</span>
+      <strong>AIを仕事や副業に活かしたい</strong><small>AIに仕事を任せ、できることを増やす</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+<a class="goal-card goal-create" href="#create">
+      <span class="goal-number">04</span>
+      <strong>画像や動画を作りたい</strong><small>画像・漫画・動画・ゲームをAIと作る</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+<a class="goal-card goal-share" href="#share">
+      <span class="goal-number">05</span>
+      <strong>SNS・noteで発信したい</strong><small>書くことや発信を小さく始める</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+<a class="goal-card goal-skill" href="#skill">
+      <span class="goal-number">06</span>
+      <strong>得意を副業にしたい</strong><small>占い・英語などの経験を仕事につなげる</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+<a class="goal-card goal-life" href="#life">
+      <span class="goal-number">07</span>
+      <strong>働き方や収入を変えたい</strong><small>会社だけに頼らない選択肢を持つ</small>
+      <span class="goal-meta"><b>→</b></span>
+    </a>
+</nav>
+  <div class="series-box">
+    <div><p class="series-label">使いたいAIやシリーズが決まっている方へ</p><p class="series-note">同じ本を重複表示せず、該当する本だけに絞れます。</p></div>
+    <div class="series-buttons" role="group" aria-label="シリーズで絞り込む">
+      <button class="filter active" data-filter="all">すべて</button>
+      <button class="filter" data-filter="chatgpt">ChatGPT</button>
+      <button class="filter" data-filter="claude">Claude</button>
+      <button class="filter" data-filter="kimi">Kimi</button>
+      <button class="filter" data-filter="kindle">Kindle出版</button>
+    </div>
+  </div>
+</section>
+<section id="publish" class="shelf shelf-publish" data-goal="publish"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 01</p><h2>本を出版したい</h2><p>書きたい気持ちを、1冊の形にする</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="ChatGPTを使って７日でKindle出版！" data-series="chatgpt kindle" href="https://x.gd/YlNGJ" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/01.jpg" alt="ChatGPTを使って７日でKindle出版！ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">自分の本を出したい人</p>
+        <h3>ChatGPTを使って７日でKindle出版！</h3>
+        <p class="outcome"><span>読んだあと</span>7日で作家デビューする手順書</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Claudeを使って1日でKindle出版！" data-series="claude kindle" href="https://x.gd/Pg6Ii" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/02.jpg" alt="Claudeを使って1日でKindle出版！ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">自分の本を出したい人</p>
+        <h3>Claudeを使って1日でKindle出版！</h3>
+        <p class="outcome"><span>読んだあと</span>最短1日でClaudeと本を出す</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Kindle出版 5ヶ月で月15万を稼ぐ方法" data-series="kindle" href="https://x.gd/X27nt" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/03.jpg" alt="Kindle出版 5ヶ月で月15万を稼ぐ方法 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">自分の本を出したい人</p>
+        <h3>Kindle出版 5ヶ月で月15万を稼ぐ方法</h3>
+        <p class="outcome"><span>読んだあと</span>出版後に伸ばす実践ノウハウ</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="はじめてのKindle出版 30のQ&amp;A" data-series="kindle" href="https://www.amazon.co.jp/dp/B0HBC3X87M" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/29.jpg" alt="はじめてのKindle出版 30のQ&amp;A の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">自分の本を出したい人</p>
+        <h3>はじめてのKindle出版 30のQ&amp;A</h3>
+        <p class="outcome"><span>読んだあと</span>出す前の不安に答えるQ&amp;A集</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e1" class="wrap-outer"><div class="wrap"><h2>Kindle出版<small>出版で収入を作る</small></h2><p class="tagline">書きたい気持ちがあれば、本は出版できます。</p><div class="pick-row">
-<a class="pick-card" data-title="ChatGPTを使って７日でKindle出版！" href="https://x.gd/YlNGJ" target="_blank" rel="noopener">
-<img src="covers/01.jpg" alt="ChatGPTを使って７日でKindle出版！ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>ChatGPTを使って７日でKindle出版！</h3><p>7日で作家デビューする手順書</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Claudeを使って1日でKindle出版！" href="https://x.gd/Pg6Ii" target="_blank" rel="noopener">
-<img src="covers/02.jpg" alt="Claudeを使って1日でKindle出版！ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>Claudeを使って1日でKindle出版！</h3><p>最短1日でClaudeと本を出す</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Kindle出版 5ヶ月で月15万を稼ぐ方法" href="https://x.gd/X27nt" target="_blank" rel="noopener">
-<img src="covers/03.jpg" alt="Kindle出版 5ヶ月で月15万を稼ぐ方法 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">もっと深める1冊</span>
-<h3>Kindle出版 5ヶ月で月15万を稼ぐ方法</h3><p>出版後に伸ばす実践ノウハウ</p><span class="go">Amazonで見る →</span></div></a>
+<section id="learn" class="shelf shelf-learn" data-goal="learn"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 02</p><h2>AIを学びたい</h2><p>ChatGPTやClaudeの基本をやさしく知る</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="Claudeって、そもそも何？" data-series="claude" href="https://x.gd/reg2g" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/04.jpg" alt="Claudeって、そもそも何？ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>Claudeって、そもそも何？</h3>
+        <p class="outcome"><span>読んだあと</span>Claudeの全体像がまずわかる</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいClaudeCodeの教科書" data-series="claude" href="https://x.gd/ILhdi" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/05.jpg" alt="いちばんやさしいClaudeCodeの教科書 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>いちばんやさしいClaudeCodeの教科書</h3>
+        <p class="outcome"><span>読んだあと</span>非エンジニアのためのClaudeCode</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいClaudeCoworkの教科書" data-series="claude" href="https://x.gd/k9Qa0" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/07.jpg" alt="いちばんやさしいClaudeCoworkの教科書 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>いちばんやさしいClaudeCoworkの教科書</h3>
+        <p class="outcome"><span>読んだあと</span>仕事を任せるCoworkの基本</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいChatGPTCodexの教科書" data-series="chatgpt" href="https://x.gd/e9f4C" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/10.jpg" alt="いちばんやさしいChatGPTCodexの教科書 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>いちばんやさしいChatGPTCodexの教科書</h3>
+        <p class="outcome"><span>読んだあと</span>ChatGPT Codexをやさしく解説</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしい NotebookLMの教科書" data-series="other" href="https://x.gd/XcfR7" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/11.jpg" alt="いちばんやさしい NotebookLMの教科書 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>いちばんやさしい NotebookLMの教科書</h3>
+        <p class="outcome"><span>読んだあと</span>資料整理が変わるNotebookLM</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Obsidianって、便利なの？" data-series="other" href="https://x.gd/ff80T" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/12.jpg" alt="Obsidianって、便利なの？ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>Obsidianって、便利なの？</h3>
+        <p class="outcome"><span>読んだあと</span>メモ管理の新定番を体験</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPT入門書 超初心者向け 知識ゼロでも大丈夫" data-series="chatgpt" href="https://x.gd/2AciW" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/13.jpg" alt="ChatGPT入門書 超初心者向け 知識ゼロでも大丈夫 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIの基本から知りたい人</p>
+        <h3>ChatGPT入門書 超初心者向け 知識ゼロでも大丈夫</h3>
+        <p class="outcome"><span>読んだあと</span>知識ゼロからの最初の一冊</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e2" class="wrap-outer"><div class="wrap"><h2>Claude活用<small>話題のClaudeを使いこなす</small></h2><p class="tagline">話題のClaude、まずは肩の力を抜いて触ってみましょう。</p><div class="pick-row">
-<a class="pick-card" data-title="Claudeって、そもそも何？" href="https://x.gd/reg2g" target="_blank" rel="noopener">
-<img src="covers/04.jpg" alt="Claudeって、そもそも何？ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>Claudeって、そもそも何？</h3><p>Claudeの全体像がまずわかる</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="いちばんやさしいClaudeCodeの教科書" href="https://x.gd/ILhdi" target="_blank" rel="noopener">
-<img src="covers/05.jpg" alt="いちばんやさしいClaudeCodeの教科書 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>いちばんやさしいClaudeCodeの教科書</h3><p>非エンジニアのためのClaudeCode</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="いちばんやさしいClaudeCoworkの教科書" href="https://x.gd/k9Qa0" target="_blank" rel="noopener">
-<img src="covers/07.jpg" alt="いちばんやさしいClaudeCoworkの教科書 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">もっと深める1冊</span>
-<h3>いちばんやさしいClaudeCoworkの教科書</h3><p>仕事を任せるCoworkの基本</p><span class="go">Amazonで見る →</span></div></a>
+<section id="work" class="shelf shelf-work" data-goal="work"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 03</p><h2>AIを仕事や副業に活かしたい</h2><p>AIに仕事を任せ、できることを増やす</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="ClaudeCoworkで会社の仕事を自動化してみた" data-series="claude" href="https://x.gd/0LKso" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/06.jpg" alt="ClaudeCoworkで会社の仕事を自動化してみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIを仕事や副業で使いたい人</p>
+        <h3>ClaudeCoworkで会社の仕事を自動化してみた</h3>
+        <p class="outcome"><span>読んだあと</span>会社の仕事を自動化した記録</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいClaudeCodeでできること全部やってみた" data-series="claude" href="https://x.gd/c280w" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/08.jpg" alt="いちばんやさしいClaudeCodeでできること全部やってみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIを仕事や副業で使いたい人</p>
+        <h3>いちばんやさしいClaudeCodeでできること全部やってみた</h3>
+        <p class="outcome"><span>読んだあと</span>ClaudeCode活用の実例集</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいClaude CodeのWebアプリ開発" data-series="claude" href="https://x.gd/CHYbV" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/09.jpg" alt="いちばんやさしいClaude CodeのWebアプリ開発 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIを仕事や副業で使いたい人</p>
+        <h3>いちばんやさしいClaude CodeのWebアプリ開発</h3>
+        <p class="outcome"><span>読んだあと</span>アプリを作って売るまで体験</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた" data-series="chatgpt" href="https://www.amazon.co.jp/dp/B0H98G9SQ9" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/30.jpg" alt="いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIを仕事や副業で使いたい人</p>
+        <h3>いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた</h3>
+        <p class="outcome"><span>読んだあと</span>Codexで業務改善アプリを自作</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPT Workで業務をとことん自動化してみた" data-series="chatgpt" href="https://aoi-kurochan.com/l/u/kbook_36" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/34.jpg" alt="ChatGPT Workで業務をとことん自動化してみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIを仕事や副業で使いたい人</p>
+        <h3>ChatGPT Workで業務をとことん自動化してみた</h3>
+        <p class="outcome"><span>読んだあと</span>面倒な業務をAIにとことん任せる</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e3" class="wrap-outer"><div class="wrap"><h2>AIツールの基本<small>ChatGPT・NotebookLM・Obsidian</small></h2><p class="tagline">便利な道具を、ひとつずつ自分のものに。</p><div class="pick-row">
-<a class="pick-card" data-title="いちばんやさしいChatGPTCodexの教科書" href="https://x.gd/e9f4C" target="_blank" rel="noopener">
-<img src="covers/10.jpg" alt="いちばんやさしいChatGPTCodexの教科書 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>いちばんやさしいChatGPTCodexの教科書</h3><p>ChatGPT Codexをやさしく解説</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="いちばんやさしい NotebookLMの教科書" href="https://x.gd/XcfR7" target="_blank" rel="noopener">
-<img src="covers/11.jpg" alt="いちばんやさしい NotebookLMの教科書 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>いちばんやさしい NotebookLMの教科書</h3><p>資料整理が変わるNotebookLM</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Obsidianって、便利なの？" href="https://x.gd/ff80T" target="_blank" rel="noopener">
-<img src="covers/12.jpg" alt="Obsidianって、便利なの？ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">もっと深める1冊</span>
-<h3>Obsidianって、便利なの？</h3><p>メモ管理の新定番を体験</p><span class="go">Amazonで見る →</span></div></a>
+<section id="create" class="shelf shelf-create" data-goal="create"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 04</p><h2>画像や動画を作りたい</h2><p>画像・漫画・動画・ゲームをAIと作る</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="2026年度版ChatGPT「超」簡単誰でもできる画像生成入門" data-series="chatgpt" href="https://x.gd/AGMqi" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/14.jpg" alt="2026年度版ChatGPT「超」簡単誰でもできる画像生成入門 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>2026年度版ChatGPT「超」簡単誰でもできる画像生成入門</h3>
+        <p class="outcome"><span>読んだあと</span>画像生成の基本を最短で</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPT Images 2.0 画像生成入門" data-series="chatgpt" href="https://x.gd/Rwmlj" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/15.jpg" alt="ChatGPT Images 2.0 画像生成入門 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>ChatGPT Images 2.0 画像生成入門</h3>
+        <p class="outcome"><span>読んだあと</span>最新の画像生成をやさしく</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門" data-series="other" href="https://x.gd/dwJsh" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/16.jpg" alt="Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門</h3>
+        <p class="outcome"><span>読んだあと</span>AI漫画と画像づくりの超入門</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいClaude Designの教科書" data-series="claude" href="https://x.gd/mb6FJ" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/17.jpg" alt="いちばんやさしいClaude Designの教科書 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>いちばんやさしいClaude Designの教科書</h3>
+        <p class="outcome"><span>読んだあと</span>デザインもAIに任せる時代へ</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="いちばんやさしいClaude Code × Fable 5でゲームを3本作ってみた" data-series="claude" href="https://www.amazon.co.jp/dp/B0HDBM4Y6H" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/32.jpg" alt="いちばんやさしいClaude Code × Fable 5でゲームを3本作ってみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>いちばんやさしいClaude Code × Fable 5でゲームを3本作ってみた</h3>
+        <p class="outcome"><span>読んだあと</span>コードを書かずにゲームを3本</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Claude CodeでYouTube動画を作ってみた" data-series="claude" href="https://aoi-kurochan.com/l/u/kbook_35" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/33.jpg" alt="Claude CodeでYouTube動画を作ってみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>Claude CodeでYouTube動画を作ってみた</h3>
+        <p class="outcome"><span>読んだあと</span>顔出し・声出しなしで動画を作る</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Kimi K3でAIアニメ・ドラマを作ってみた" data-series="kimi" href="https://aoi-kurochan.com/l/u/kbook_37" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/35.jpg" alt="Kimi K3でAIアニメ・ドラマを作ってみた の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">AIでものづくりをしたい人</p>
+        <h3>Kimi K3でAIアニメ・ドラマを作ってみた</h3>
+        <p class="outcome"><span>読んだあと</span>AIアニメやドラマを動画にする</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e4" class="wrap-outer"><div class="wrap"><h2>画像生成<small>AIで絵・漫画・サムネ</small></h2><p class="tagline">絵が苦手でも大丈夫。言葉があれば描けます。</p><div class="pick-row">
-<a class="pick-card" data-title="Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門" href="https://x.gd/dwJsh" target="_blank" rel="noopener">
-<img src="covers/16.jpg" alt="Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門</h3><p>AI漫画と画像づくりの超入門</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="ChatGPT Images 2.0 画像生成入門" href="https://x.gd/Rwmlj" target="_blank" rel="noopener">
-<img src="covers/15.jpg" alt="ChatGPT Images 2.0 画像生成入門 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>ChatGPT Images 2.0 画像生成入門</h3><p>最新の画像生成をやさしく</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="いちばんやさしいClaude Designの教科書" href="https://x.gd/mb6FJ" target="_blank" rel="noopener">
-<img src="covers/17.jpg" alt="いちばんやさしいClaude Designの教科書 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">もっと深める1冊</span>
-<h3>いちばんやさしいClaude Designの教科書</h3><p>デザインもAIに任せる時代へ</p><span class="go">Amazonで見る →</span></div></a>
+<section id="share" class="shelf shelf-share" data-goal="share"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 05</p><h2>SNS・noteで発信したい</h2><p>書くことや発信を小さく始める</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="ChatGPTでnoteを始めよう" data-series="chatgpt" href="https://x.gd/e8cEh" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/18.jpg" alt="ChatGPTでnoteを始めよう の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">SNSやnoteで発信したい人</p>
+        <h3>ChatGPTでnoteを始めよう</h3>
+        <p class="outcome"><span>読んだあと</span>noteの始め方をゼロから</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="note副業×ChatGPT 1日5分のAIライティング" data-series="chatgpt" href="https://x.gd/6x2kd" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/19.jpg" alt="note副業×ChatGPT 1日5分のAIライティング の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">SNSやnoteで発信したい人</p>
+        <h3>note副業×ChatGPT 1日5分のAIライティング</h3>
+        <p class="outcome"><span>読んだあと</span>1日5分で続けるnote運用</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話" data-series="other" href="https://www.amazon.co.jp/dp/B0HC9N3HHP" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/31.jpg" alt="AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">SNSやnoteで発信したい人</p>
+        <h3>AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話</h3>
+        <p class="outcome"><span>読んだあと</span>全自動を目指してつまずいた9日間</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e5" class="wrap-outer"><div class="wrap"><h2>note<small>書く習慣から始める</small></h2><p class="tagline">うまく書けなくていい。まず一記事から。</p><div class="pick-row">
-<a class="pick-card" data-title="ChatGPTでnoteを始めよう" href="https://x.gd/e8cEh" target="_blank" rel="noopener">
-<img src="covers/18.jpg" alt="ChatGPTでnoteを始めよう の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>ChatGPTでnoteを始めよう</h3><p>noteの始め方をゼロから</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="note副業×ChatGPT 1日5分のAIライティング" href="https://x.gd/6x2kd" target="_blank" rel="noopener">
-<img src="covers/19.jpg" alt="note副業×ChatGPT 1日5分のAIライティング の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>note副業×ChatGPT 1日5分のAIライティング</h3><p>1日5分で続けるnote運用</p><span class="go">Amazonで見る →</span></div></a>
+<section id="skill" class="shelf shelf-skill" data-goal="skill"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 06</p><h2>得意を副業にしたい</h2><p>占い・英語などの経験を仕事につなげる</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="ChatGPTで稼げる占い師になろう！" data-series="chatgpt" href="https://x.gd/eUpG1" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/20.jpg" alt="ChatGPTで稼げる占い師になろう！ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">好きや得意を副業にしたい人</p>
+        <h3>ChatGPTで稼げる占い師になろう！</h3>
+        <p class="outcome"><span>読んだあと</span>AI占い副業の入門書</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPTで数秘術占い師になろう！" data-series="chatgpt" href="https://x.gd/50v9r" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/21.jpg" alt="ChatGPTで数秘術占い師になろう！ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">好きや得意を副業にしたい人</p>
+        <h3>ChatGPTで数秘術占い師になろう！</h3>
+        <p class="outcome"><span>読んだあと</span>数秘術をAIで仕事にする</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPTで手相占い師になろう！" data-series="chatgpt" href="https://x.gd/Sx1x0" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/22.jpg" alt="ChatGPTで手相占い師になろう！ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">好きや得意を副業にしたい人</p>
+        <h3>ChatGPTで手相占い師になろう！</h3>
+        <p class="outcome"><span>読んだあと</span>手相占いもAIでここまで</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPTで独学英語！" data-series="chatgpt" href="https://x.gd/GzG3c" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/23.jpg" alt="ChatGPTで独学英語！ の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">好きや得意を副業にしたい人</p>
+        <h3>ChatGPTで独学英語！</h3>
+        <p class="outcome"><span>読んだあと</span>英語学習をAIで安く速く</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="ChatGPTでTOEIC攻略" data-series="chatgpt" href="https://x.gd/9ZHez" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/24.jpg" alt="ChatGPTでTOEIC攻略 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">好きや得意を副業にしたい人</p>
+        <h3>ChatGPTでTOEIC攻略</h3>
+        <p class="outcome"><span>読んだあと</span>TOEIC対策をChatGPTで</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e6" class="wrap-outer"><div class="wrap"><h2>占い・英語<small>得意を副業にする</small></h2><p class="tagline">あなたの好きは、そのまま誰かの役に立ちます。</p><div class="pick-row">
-<a class="pick-card" data-title="ChatGPTで稼げる占い師になろう！" href="https://x.gd/eUpG1" target="_blank" rel="noopener">
-<img src="covers/20.jpg" alt="ChatGPTで稼げる占い師になろう！ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>ChatGPTで稼げる占い師になろう！</h3><p>AI占い副業の入門書</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="ChatGPTで数秘術占い師になろう！" href="https://x.gd/50v9r" target="_blank" rel="noopener">
-<img src="covers/21.jpg" alt="ChatGPTで数秘術占い師になろう！ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>ChatGPTで数秘術占い師になろう！</h3><p>数秘術をAIで仕事にする</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="ChatGPTで独学英語！" href="https://x.gd/GzG3c" target="_blank" rel="noopener">
-<img src="covers/23.jpg" alt="ChatGPTで独学英語！ の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">もっと深める1冊</span>
-<h3>ChatGPTで独学英語！</h3><p>英語学習をAIで安く速く</p><span class="go">Amazonで見る →</span></div></a>
+<section id="life" class="shelf shelf-life" data-goal="life"><div class="wrap">
+      <div class="shelf-head"><div><p class="shelf-number">SHELF 07</p><h2>働き方や収入を変えたい</h2><p>会社だけに頼らない選択肢を持つ</p></div></div>
+      <div class="book-grid">
+<a class="book-card" data-title="Kindle出版始めたら6ヶ月でFIREできた私の話" data-series="kindle" href="https://x.gd/Wg3fs" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/25.jpg" alt="Kindle出版始めたら6ヶ月でFIREできた私の話 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">働き方と収入を見直したい人</p>
+        <h3>Kindle出版始めたら6ヶ月でFIREできた私の話</h3>
+        <p class="outcome"><span>読んだあと</span>副業出版のリアルな体験記</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Kindle出版始めたら1年で年収が500万増えた私の話" data-series="kindle" href="https://x.gd/woUkf" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/26.jpg" alt="Kindle出版始めたら1年で年収が500万増えた私の話 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">働き方と収入を見直したい人</p>
+        <h3>Kindle出版始めたら1年で年収が500万増えた私の話</h3>
+        <p class="outcome"><span>読んだあと</span>1年間続けた結果のすべて</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="Kindle出版始めたら1年で本業月収を超えた私の話" data-series="kindle" href="https://x.gd/eiG3x" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/27.jpg" alt="Kindle出版始めたら1年で本業月収を超えた私の話 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">働き方と収入を見直したい人</p>
+        <h3>Kindle出版始めたら1年で本業月収を超えた私の話</h3>
+        <p class="outcome"><span>読んだあと</span>本業超えの先の、リアルな本音</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
+<a class="book-card" data-title="初めてのBrainが100万円売れた私の話" data-series="other" href="https://www.amazon.co.jp/dp/B0H87WX13W" target="_blank" rel="noopener">
+      <div class="cover-wrap"><img src="covers/28.jpg" alt="初めてのBrainが100万円売れた私の話 の表紙" loading="lazy"></div>
+      <div class="book-copy">
+        <p class="book-kicker">こんな人へ</p>
+        <p class="audience">働き方と収入を見直したい人</p>
+        <h3>初めてのBrainが100万円売れた私の話</h3>
+        <p class="outcome"><span>読んだあと</span>初めて高単価教材を出すまでの記録</p>
+        <span class="amazon">Amazonで見る <b>→</b></span>
+      </div>
+    </a>
 </div></div></section>
-<section id="e7" class="wrap-outer"><div class="wrap"><h2>働き方・FIRE<small>会社に頼らない人生</small></h2><p class="tagline">会社の外にも、道はちゃんとあります。</p><div class="pick-row">
-<a class="pick-card" data-title="Kindle出版始めたら6ヶ月でFIREできた私の話" href="https://x.gd/Wg3fs" target="_blank" rel="noopener">
-<img src="covers/25.jpg" alt="Kindle出版始めたら6ヶ月でFIREできた私の話 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>Kindle出版始めたら6ヶ月でFIREできた私の話</h3><p>副業出版のリアルな体験記</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Kindle出版始めたら1年で年収が500万増えた私の話" href="https://x.gd/woUkf" target="_blank" rel="noopener">
-<img src="covers/26.jpg" alt="Kindle出版始めたら1年で年収が500万増えた私の話 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>Kindle出版始めたら1年で年収が500万増えた私の話</h3><p>1年間続けた結果のすべて</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="Kindle出版始めたら1年で本業月収を超えた私の話" href="https://x.gd/eiG3x" target="_blank" rel="noopener">
-<img src="covers/27.jpg" alt="Kindle出版始めたら1年で本業月収を超えた私の話 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-deep">もっと深める1冊</span>
-<h3>Kindle出版始めたら1年で本業月収を超えた私の話</h3><p>本業超えの先の、リアルな本音</p><span class="go">Amazonで見る →</span></div></a>
-</div></div></section>
-<section id="e8" class="wrap-outer"><div class="wrap"><h2>AI副業<small>AIで新しい収入をつくる</small></h2><p class="tagline">これまでの経験から、小さく始めていけます。</p><div class="pick-row">
-<a class="pick-card" data-title="初めてのBrainが100万円売れた私の話" href="https://www.amazon.co.jp/dp/B0H87WX13W" target="_blank" rel="noopener">
-<img src="covers/28.jpg" alt="初めてのBrainが100万円売れた私の話 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-first">最初の1冊</span>
-<h3>初めてのBrainが100万円売れた私の話</h3><p>初めて高単価教材を出すまでの記録</p><span class="go">Amazonで見る →</span></div></a>
-<a class="pick-card" data-title="AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話" href="https://www.amazon.co.jp/dp/B0HC9N3HHP" target="_blank" rel="noopener">
-<img src="covers/31.jpg" alt="AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話 の表紙" loading="lazy">
-<div class="pick-body"><span class="label lb-next">次に読む1冊</span>
-<h3>AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話</h3><p>全自動を目指してつまずいた9日間</p><span class="go">Amazonで見る →</span></div></a>
-</div></div></section>
-<section class="tone wrap-outer"><div class="wrap"><h2>ぜんぶの本</h2><p class="tagline">もっと見たい方はこちらから。</p>
-<h3 class="genre-h">Kindle出版</h3><div class="grid">
-<a class="grid-card" data-title="ChatGPTを使って７日でKindle出版！" href="https://x.gd/YlNGJ" target="_blank" rel="noopener">
-<img src="covers/01.jpg" alt="ChatGPTを使って７日でKindle出版！ の表紙" loading="lazy">
-<h4>ChatGPTを使って７日でKindle出版！</h4><p>7日で作家デビューする手順書</p></a>
-<a class="grid-card" data-title="Claudeを使って1日でKindle出版！" href="https://x.gd/Pg6Ii" target="_blank" rel="noopener">
-<img src="covers/02.jpg" alt="Claudeを使って1日でKindle出版！ の表紙" loading="lazy">
-<h4>Claudeを使って1日でKindle出版！</h4><p>最短1日でClaudeと本を出す</p></a>
-<a class="grid-card" data-title="Kindle出版 5ヶ月で月15万を稼ぐ方法" href="https://x.gd/X27nt" target="_blank" rel="noopener">
-<img src="covers/03.jpg" alt="Kindle出版 5ヶ月で月15万を稼ぐ方法 の表紙" loading="lazy">
-<h4>Kindle出版 5ヶ月で月15万を稼ぐ方法</h4><p>出版後に伸ばす実践ノウハウ</p></a>
-<a class="grid-card" data-title="はじめてのKindle出版 30のQ&amp;A" href="https://www.amazon.co.jp/dp/B0HBC3X87M" target="_blank" rel="noopener">
-<img src="covers/29.jpg" alt="はじめてのKindle出版 30のQ&amp;A の表紙" loading="lazy">
-<h4>はじめてのKindle出版 30のQ&amp;A</h4><p>出す前の不安に答えるQ&amp;A集</p></a>
-</div>
-<h3 class="genre-h">Claude活用</h3><div class="grid">
-<a class="grid-card" data-title="Claudeって、そもそも何？" href="https://x.gd/reg2g" target="_blank" rel="noopener">
-<img src="covers/04.jpg" alt="Claudeって、そもそも何？ の表紙" loading="lazy">
-<h4>Claudeって、そもそも何？</h4><p>Claudeの全体像がまずわかる</p></a>
-<a class="grid-card" data-title="いちばんやさしいClaudeCodeの教科書" href="https://x.gd/ILhdi" target="_blank" rel="noopener">
-<img src="covers/05.jpg" alt="いちばんやさしいClaudeCodeの教科書 の表紙" loading="lazy">
-<h4>いちばんやさしいClaudeCodeの教科書</h4><p>非エンジニアのためのClaudeCode</p></a>
-<a class="grid-card" data-title="ClaudeCoworkで会社の仕事を自動化してみた" href="https://x.gd/0LKso" target="_blank" rel="noopener">
-<img src="covers/06.jpg" alt="ClaudeCoworkで会社の仕事を自動化してみた の表紙" loading="lazy">
-<h4>ClaudeCoworkで会社の仕事を自動化してみた</h4><p>会社の仕事を自動化した記録</p></a>
-<a class="grid-card" data-title="いちばんやさしいClaudeCoworkの教科書" href="https://x.gd/k9Qa0" target="_blank" rel="noopener">
-<img src="covers/07.jpg" alt="いちばんやさしいClaudeCoworkの教科書 の表紙" loading="lazy">
-<h4>いちばんやさしいClaudeCoworkの教科書</h4><p>仕事を任せるCoworkの基本</p></a>
-<a class="grid-card" data-title="いちばんやさしいClaudeCodeでできること全部やってみた" href="https://x.gd/c280w" target="_blank" rel="noopener">
-<img src="covers/08.jpg" alt="いちばんやさしいClaudeCodeでできること全部やってみた の表紙" loading="lazy">
-<h4>いちばんやさしいClaudeCodeでできること全部やってみた</h4><p>ClaudeCode活用の実例集</p></a>
-<a class="grid-card" data-title="いちばんやさしいClaude CodeのWebアプリ開発" href="https://x.gd/CHYbV" target="_blank" rel="noopener">
-<img src="covers/09.jpg" alt="いちばんやさしいClaude CodeのWebアプリ開発 の表紙" loading="lazy">
-<h4>いちばんやさしいClaude CodeのWebアプリ開発</h4><p>アプリを作って売るまで体験</p></a>
-<a class="grid-card" data-title="いちばんやさしいClaude Code × Fable 5でゲームを3本作ってみた" href="https://www.amazon.co.jp/dp/B0HDBM4Y6H" target="_blank" rel="noopener">
-<img src="covers/32.jpg" alt="いちばんやさしいClaude Code × Fable 5でゲームを3本作ってみた の表紙" loading="lazy">
-<h4>いちばんやさしいClaude Code × Fable 5でゲームを3本作ってみた</h4><p>コードを書かずにゲームを3本</p></a>
-<a class="grid-card" data-title="Claude CodeでYouTube動画を作ってみた" href="https://aoi-kurochan.com/l/u/kbook_35" target="_blank" rel="noopener">
-<img src="covers/33.jpg" alt="Claude CodeでYouTube動画を作ってみた の表紙" loading="lazy">
-<h4>Claude CodeでYouTube動画を作ってみた</h4><p>顔出し・声出しなしで動画を作る</p></a>
-</div>
-<h3 class="genre-h">AIツールの基本</h3><div class="grid">
-<a class="grid-card" data-title="いちばんやさしいChatGPTCodexの教科書" href="https://x.gd/e9f4C" target="_blank" rel="noopener">
-<img src="covers/10.jpg" alt="いちばんやさしいChatGPTCodexの教科書 の表紙" loading="lazy">
-<h4>いちばんやさしいChatGPTCodexの教科書</h4><p>ChatGPT Codexをやさしく解説</p></a>
-<a class="grid-card" data-title="いちばんやさしい NotebookLMの教科書" href="https://x.gd/XcfR7" target="_blank" rel="noopener">
-<img src="covers/11.jpg" alt="いちばんやさしい NotebookLMの教科書 の表紙" loading="lazy">
-<h4>いちばんやさしい NotebookLMの教科書</h4><p>資料整理が変わるNotebookLM</p></a>
-<a class="grid-card" data-title="Obsidianって、便利なの？" href="https://x.gd/ff80T" target="_blank" rel="noopener">
-<img src="covers/12.jpg" alt="Obsidianって、便利なの？ の表紙" loading="lazy">
-<h4>Obsidianって、便利なの？</h4><p>メモ管理の新定番を体験</p></a>
-<a class="grid-card" data-title="ChatGPT入門書 超初心者向け 知識ゼロでも大丈夫" href="https://x.gd/2AciW" target="_blank" rel="noopener">
-<img src="covers/13.jpg" alt="ChatGPT入門書 超初心者向け 知識ゼロでも大丈夫 の表紙" loading="lazy">
-<h4>ChatGPT入門書 超初心者向け 知識ゼロでも大丈夫</h4><p>知識ゼロからの最初の一冊</p></a>
-<a class="grid-card" data-title="いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた" href="https://www.amazon.co.jp/dp/B0H98G9SQ9" target="_blank" rel="noopener">
-<img src="covers/30.jpg" alt="いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた の表紙" loading="lazy">
-<h4>いちばんやさしいChatGPT Codexで業務改善アプリを作ってみた</h4><p>Codexで業務改善アプリを自作</p></a>
-<a class="grid-card" data-title="ChatGPT Workで業務をとことん自動化してみた" href="https://aoi-kurochan.com/l/u/kbook_36" target="_blank" rel="noopener">
-<img src="covers/34.jpg" alt="ChatGPT Workで業務をとことん自動化してみた の表紙" loading="lazy">
-<h4>ChatGPT Workで業務をとことん自動化してみた</h4><p>面倒な業務をAIにとことん任せる</p></a>
-</div>
-<h3 class="genre-h">画像生成</h3><div class="grid">
-<a class="grid-card" data-title="2026年度版ChatGPT「超」簡単誰でもできる画像生成入門" href="https://x.gd/AGMqi" target="_blank" rel="noopener">
-<img src="covers/14.jpg" alt="2026年度版ChatGPT「超」簡単誰でもできる画像生成入門 の表紙" loading="lazy">
-<h4>2026年度版ChatGPT「超」簡単誰でもできる画像生成入門</h4><p>画像生成の基本を最短で</p></a>
-<a class="grid-card" data-title="ChatGPT Images 2.0 画像生成入門" href="https://x.gd/Rwmlj" target="_blank" rel="noopener">
-<img src="covers/15.jpg" alt="ChatGPT Images 2.0 画像生成入門 の表紙" loading="lazy">
-<h4>ChatGPT Images 2.0 画像生成入門</h4><p>最新の画像生成をやさしく</p></a>
-<a class="grid-card" data-title="Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門" href="https://x.gd/dwJsh" target="_blank" rel="noopener">
-<img src="covers/16.jpg" alt="Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門 の表紙" loading="lazy">
-<h4>Nano Banana Pro 完全初心者のためのAI漫画・画像生成入門</h4><p>AI漫画と画像づくりの超入門</p></a>
-<a class="grid-card" data-title="いちばんやさしいClaude Designの教科書" href="https://x.gd/mb6FJ" target="_blank" rel="noopener">
-<img src="covers/17.jpg" alt="いちばんやさしいClaude Designの教科書 の表紙" loading="lazy">
-<h4>いちばんやさしいClaude Designの教科書</h4><p>デザインもAIに任せる時代へ</p></a>
-</div>
-<h3 class="genre-h">note</h3><div class="grid">
-<a class="grid-card" data-title="ChatGPTでnoteを始めよう" href="https://x.gd/e8cEh" target="_blank" rel="noopener">
-<img src="covers/18.jpg" alt="ChatGPTでnoteを始めよう の表紙" loading="lazy">
-<h4>ChatGPTでnoteを始めよう</h4><p>noteの始め方をゼロから</p></a>
-<a class="grid-card" data-title="note副業×ChatGPT 1日5分のAIライティング" href="https://x.gd/6x2kd" target="_blank" rel="noopener">
-<img src="covers/19.jpg" alt="note副業×ChatGPT 1日5分のAIライティング の表紙" loading="lazy">
-<h4>note副業×ChatGPT 1日5分のAIライティング</h4><p>1日5分で続けるnote運用</p></a>
-</div>
-<h3 class="genre-h">占い・英語</h3><div class="grid">
-<a class="grid-card" data-title="ChatGPTで稼げる占い師になろう！" href="https://x.gd/eUpG1" target="_blank" rel="noopener">
-<img src="covers/20.jpg" alt="ChatGPTで稼げる占い師になろう！ の表紙" loading="lazy">
-<h4>ChatGPTで稼げる占い師になろう！</h4><p>AI占い副業の入門書</p></a>
-<a class="grid-card" data-title="ChatGPTで数秘術占い師になろう！" href="https://x.gd/50v9r" target="_blank" rel="noopener">
-<img src="covers/21.jpg" alt="ChatGPTで数秘術占い師になろう！ の表紙" loading="lazy">
-<h4>ChatGPTで数秘術占い師になろう！</h4><p>数秘術をAIで仕事にする</p></a>
-<a class="grid-card" data-title="ChatGPTで手相占い師になろう！" href="https://x.gd/Sx1x0" target="_blank" rel="noopener">
-<img src="covers/22.jpg" alt="ChatGPTで手相占い師になろう！ の表紙" loading="lazy">
-<h4>ChatGPTで手相占い師になろう！</h4><p>手相占いもAIでここまで</p></a>
-<a class="grid-card" data-title="ChatGPTで独学英語！" href="https://x.gd/GzG3c" target="_blank" rel="noopener">
-<img src="covers/23.jpg" alt="ChatGPTで独学英語！ の表紙" loading="lazy">
-<h4>ChatGPTで独学英語！</h4><p>英語学習をAIで安く速く</p></a>
-<a class="grid-card" data-title="ChatGPTでTOEIC攻略" href="https://x.gd/9ZHez" target="_blank" rel="noopener">
-<img src="covers/24.jpg" alt="ChatGPTでTOEIC攻略 の表紙" loading="lazy">
-<h4>ChatGPTでTOEIC攻略</h4><p>TOEIC対策をChatGPTで</p></a>
-</div>
-<h3 class="genre-h">働き方・FIRE</h3><div class="grid">
-<a class="grid-card" data-title="Kindle出版始めたら6ヶ月でFIREできた私の話" href="https://x.gd/Wg3fs" target="_blank" rel="noopener">
-<img src="covers/25.jpg" alt="Kindle出版始めたら6ヶ月でFIREできた私の話 の表紙" loading="lazy">
-<h4>Kindle出版始めたら6ヶ月でFIREできた私の話</h4><p>副業出版のリアルな体験記</p></a>
-<a class="grid-card" data-title="Kindle出版始めたら1年で年収が500万増えた私の話" href="https://x.gd/woUkf" target="_blank" rel="noopener">
-<img src="covers/26.jpg" alt="Kindle出版始めたら1年で年収が500万増えた私の話 の表紙" loading="lazy">
-<h4>Kindle出版始めたら1年で年収が500万増えた私の話</h4><p>1年間続けた結果のすべて</p></a>
-<a class="grid-card" data-title="Kindle出版始めたら1年で本業月収を超えた私の話" href="https://x.gd/eiG3x" target="_blank" rel="noopener">
-<img src="covers/27.jpg" alt="Kindle出版始めたら1年で本業月収を超えた私の話 の表紙" loading="lazy">
-<h4>Kindle出版始めたら1年で本業月収を超えた私の話</h4><p>本業超えの先の、リアルな本音</p></a>
-</div>
-<h3 class="genre-h">AI副業</h3><div class="grid">
-<a class="grid-card" data-title="初めてのBrainが100万円売れた私の話" href="https://www.amazon.co.jp/dp/B0H87WX13W" target="_blank" rel="noopener">
-<img src="covers/28.jpg" alt="初めてのBrainが100万円売れた私の話 の表紙" loading="lazy">
-<h4>初めてのBrainが100万円売れた私の話</h4><p>初めて高単価教材を出すまでの記録</p></a>
-<a class="grid-card" data-title="AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話" href="https://www.amazon.co.jp/dp/B0HC9N3HHP" target="_blank" rel="noopener">
-<img src="covers/31.jpg" alt="AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話 の表紙" loading="lazy">
-<h4>AIでSNS投稿を自動化しようとしたらぐちゃぐちゃになった私の話</h4><p>全自動を目指してつまずいた9日間</p></a>
-</div>
-</div></section>
-<footer><div class="wrap"><p class="f-brand">あおいの本棚</p>
-<nav><a href="https://note.com/kurokawa_aoi" target="_blank" rel="noopener">note</a>
-<a href="https://x.com/aoi_kurochan" target="_blank" rel="noopener">X</a>
-<a href="https://aoi-kurochan.github.io/smart-fire-site/" target="_blank" rel="noopener">スマートFIRE読者ページ</a></nav>
-</div></footer></body></html>
+</main>
+<footer><div class="wrap"><p class="footer-brand">あおいの本棚</p><p>あなたの「やってみたい」に、やさしい最初の1冊を。</p>
+<nav aria-label="関連リンク"><a href="https://note.com/kurokawa_aoi" target="_blank" rel="noopener">note</a><a href="https://x.com/aoi_kurochan" target="_blank" rel="noopener">X</a><a href="https://aoi-kurochan.github.io/smart-fire-site/" target="_blank" rel="noopener">スマートFIRE読者ページ</a></nav>
+</div></footer>
+<script src="app.js"></script></body></html>

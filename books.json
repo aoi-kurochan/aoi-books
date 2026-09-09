@@ -453,6 +453,19 @@
       "published": null,
       "visible": true,
       "cover": "covers/34.jpg"
+    },
+    {
+      "order": 35,
+      "title": "Kimi K3でAIアニメ・ドラマを作ってみた",
+      "entry": "画像生成",
+      "pick": null,
+      "top": false,
+      "blurb": "AIアニメやドラマを動画にする",
+      "url": "https://aoi-kurochan.com/l/u/kbook_37",
+      "asin": "B0HHRVLXDL",
+      "published": null,
+      "visible": true,
+      "cover": "covers/35.jpg"
     }
   ]
 }
