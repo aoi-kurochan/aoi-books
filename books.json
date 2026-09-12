@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-08-29",
+  "updated": "2026-09-12",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -466,6 +466,19 @@
       "published": null,
       "visible": true,
       "cover": "covers/35.jpg"
+    },
+    {
+      "order": 36,
+      "title": "ChatGPT WorkでAI副業を自動化してみた",
+      "entry": "AI副業",
+      "pick": null,
+      "top": false,
+      "blurb": "AI副業の作業をAIへ任せる流れ",
+      "url": "https://aoi-kurochan.com/l/u/kbook_38",
+      "asin": "B0HJBKL9QK",
+      "published": "2026-09-10",
+      "visible": true,
+      "cover": "covers/36.jpg"
     }
   ]
 }

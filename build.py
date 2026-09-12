@@ -25,7 +25,7 @@ GOALS = [
 GOAL_BY_ORDER = {
     **{n: "publish" for n in [1, 2, 3, 29]},
     **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13]},
-    **{n: "work" for n in [6, 8, 9, 30, 34]},
+    **{n: "work" for n in [6, 8, 9, 30, 34, 36]},
     **{n: "create" for n in [14, 15, 16, 17, 32, 33, 35]},
     **{n: "share" for n in [18, 19, 31]},
     **{n: "skill" for n in [20, 21, 22, 23, 24]},
