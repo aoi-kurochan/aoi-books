@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-09-12",
+  "updated": "2026-09-27",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -479,6 +479,19 @@
       "published": "2026-09-10",
       "visible": true,
       "cover": "covers/36.jpg"
+    },
+    {
+      "order": 37,
+      "title": "GPT-6 Astraで本気のアクションゲームを作ってみた！",
+      "entry": "画像生成",
+      "pick": null,
+      "top": false,
+      "blurb": "AIとアクションゲームを作る過程がわかる",
+      "url": "https://www.amazon.co.jp/dp/B0HK7G2YCN",
+      "asin": "B0HK7G2YCN",
+      "published": "2026-09-18",
+      "visible": true,
+      "cover": "covers/37.jpg"
     }
   ]
 }

@@ -26,7 +26,7 @@ GOAL_BY_ORDER = {
     **{n: "publish" for n in [1, 2, 3, 29]},
     **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13]},
     **{n: "work" for n in [6, 8, 9, 30, 34, 36]},
-    **{n: "create" for n in [14, 15, 16, 17, 32, 33, 35]},
+    **{n: "create" for n in [14, 15, 16, 17, 32, 33, 35, 37]},
     **{n: "share" for n in [18, 19, 31]},
     **{n: "skill" for n in [20, 21, 22, 23, 24]},
     **{n: "life" for n in [25, 26, 27, 28]},
@@ -42,10 +42,13 @@ AUDIENCE = {
     "life": "働き方と収入を見直したい人",
 }
 
+# 書名に「ChatGPT」を含まないが、ChatGPTの絞り込みに表示する本
+CHATGPT_EXTRA = {37}
+
 def series_for(book):
     title = book["title"].lower()
     result = []
-    if "chatgpt" in title:
+    if "chatgpt" in title or book["order"] in CHATGPT_EXTRA:
         result.append("chatgpt")
     if "claude" in title:
         result.append("claude")
