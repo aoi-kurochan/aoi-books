@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-09-27",
+  "updated": "2026-10-10",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -492,6 +492,19 @@
       "published": "2026-09-18",
       "visible": true,
       "cover": "covers/37.jpg"
+    },
+    {
+      "order": 38,
+      "title": "Claude Codeでnoteを書こう！",
+      "entry": "note",
+      "pick": null,
+      "top": false,
+      "blurb": "話した経験を、自分らしいnoteにする",
+      "url": "https://www.amazon.co.jp/dp/B0HMFH171M",
+      "asin": "B0HMFH171M",
+      "published": "2026-10-09",
+      "visible": true,
+      "cover": "covers/38.jpg"
     }
   ]
 }
