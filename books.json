@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-10-10",
+  "updated": "2026-10-17",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -505,6 +505,19 @@
       "published": "2026-10-09",
       "visible": true,
       "cover": "covers/38.jpg"
+    },
+    {
+      "order": 39,
+      "title": "情報漏洩も詐欺も怖すぎるけど、便利なAIは手放せないので、あわてて身の回りのセキュリティを見直した話",
+      "entry": "AI副業",
+      "pick": null,
+      "top": false,
+      "blurb": "PC・スマホ・パスワードとAI利用の安全対策を見直す",
+      "url": "https://www.amazon.co.jp/dp/B0HN7JYV8Q",
+      "asin": "B0HN7JYV8Q",
+      "published": "2026-10-16",
+      "visible": true,
+      "cover": "covers/39.jpg"
     }
   ]
 }
