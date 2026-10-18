@@ -11,3 +11,33 @@ footer{padding:46px 0;background:var(--green-dark);color:#f7f0df;text-align:cent
 @media(max-width:940px){.hero-grid{grid-template-columns:1fr .8fr;gap:30px}.hero-books{height:350px}.cover{width:125px}.goal-grid{grid-template-columns:repeat(2,1fr)}.goal-card:last-child{grid-column:1/-1;width:calc(50% - 8px);justify-self:center}.book-grid{grid-template-columns:1fr}.series-box{align-items:flex-start;flex-direction:column}.series-buttons{justify-content:flex-start}}
 @media(max-width:640px){.wrap{width:min(100% - 28px,560px)}.hero{padding:48px 0 56px}.hero-grid{display:block}.brand{margin-bottom:20px}.eyebrow{font-size:12px}.lead{font-size:16px}.lead br{display:none}.hero-books{height:265px;margin-top:35px}.halo{width:230px;height:230px}.cover{width:92px}.cover-a{left:12%;top:65px}.cover-b{left:37%;top:18px}.cover-c{right:9%;top:72px}.guide{padding:60px 0}.goal-grid{grid-template-columns:1fr}.goal-card,.goal-card:last-child{grid-column:auto;width:100%;min-height:145px;padding:22px}.goal-card strong{font-size:19px;margin-top:12px}.goal-card small{font-size:14px}.series-box{margin-top:18px;padding:19px}.series-note{display:none}.shelf{padding:58px 0}.book-grid{grid-template-columns:1fr;gap:14px}.book-card{grid-template-columns:116px 1fr;padding:15px;gap:16px}.shelf-head{align-items:flex-start}.book-copy h3{font-size:16px}.audience,.outcome,.amazon{font-size:14px}.amazon{padding-top:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.goal-card,.book-card{transition:none}}
+
+/* Color and surface tones aligned with AOI Academy. */
+:root {
+  --paper:#f3f7ef; --paper-deep:#e8efdf; --card:#ffffffb5;
+  --ink:#294a3d; --muted:#637769;
+  --green:#42634c; --green-dark:#3d5946; --gold:#8a9c78;
+  --line:#ceded0;
+  --shadow:0 14px 34px rgba(65,91,64,.08);
+  --soft-shadow:0 7px 22px rgba(65,91,64,.06);
+}
+body { background:linear-gradient(145deg,#f7f9f3,#edf3e9 42%,#f6f7ee 78%,#eff4ec); }
+.hero { background:linear-gradient(125deg,#f7f9f3 0%,#eaf2e4 100%); border-bottom-color:var(--line); }
+.paper-noise { opacity:.12; }
+.eyebrow,.section-label,.shelf-number,.goal-number,.book-kicker,.outcome span { color:#778b70; }
+.hero-cta { box-shadow:0 6px 18px rgba(66,99,76,.12); }
+.hero-cta span { color:#e6eedc; }
+.goal-card { background:#ffffffa6; box-shadow:0 2px 0 rgba(94,121,82,.03); }
+.goal-card:hover,.book-card:hover { border-color:#acc2a7; }
+.goal-learn { --accent:#e4e8de; }
+.goal-work { --accent:#dce8df; }
+.goal-create { --accent:#e8e9d9; }
+.goal-share { --accent:#e1e8dc; }
+.goal-skill { --accent:#e8ebd6; }
+.goal-life { --accent:#dce9df; }
+.filter.active { background:#edf3e7; border-color:#edf3e7; }
+.shelf:nth-of-type(even) { background:rgba(225,235,218,.4); }
+.book-card { box-shadow:0 2px 0 rgba(94,121,82,.03); }
+.cover-wrap::before { background:#dce5d6; }
+footer { color:#f2f6ed; }
+a:focus-visible,button:focus-visible { outline-color:#8a9c78; }
