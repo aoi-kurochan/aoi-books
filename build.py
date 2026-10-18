@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """books.json から本番用 index.html を生成する。"""
 import html
+import hashlib
 import json
 import re
 import sys
 from collections import Counter
+from pathlib import Path
 
 with open("books.json", encoding="utf-8") as f:
     data = json.load(f)
@@ -77,6 +79,8 @@ if set(GOAL_BY_ORDER) != {b["order"] for b in books}:
 
 series_counts = Counter(s for b in books for s in series_for(b))
 hero_books = [next(b for b in books if b["order"] == n) for n in [33, 34, 25]]
+style_version = hashlib.sha256(Path("style.css").read_bytes()).hexdigest()[:12]
+app_version = hashlib.sha256(Path("app.js").read_bytes()).hexdigest()[:12]
 
 parts = [f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
@@ -92,7 +96,7 @@ parts = [f'''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
+<link rel="stylesheet" href="style.css?v={style_version}"></head><body>
 <header class="hero"><div class="paper-noise"></div><div class="wrap hero-grid">
   <div class="hero-copy">
     <p class="brand"><span>✦</span> あおいの本棚</p>
@@ -153,11 +157,11 @@ for key, title, subtitle, number in GOALS:
         parts.append('</div>')
     parts.append('</div></section>')
 
-parts.append('''</main>
+parts.append(f'''</main>
 <footer><div class="wrap"><p class="footer-brand">あおいの本棚</p><p>あなたの「やってみたい」に、やさしい最初の1冊を。</p>
 <nav aria-label="関連リンク"><a href="https://note.com/kurokawa_aoi" target="_blank" rel="noopener">note</a><a href="https://x.com/aoi_kurochan" target="_blank" rel="noopener">X</a><a href="https://aoi-kurochan.github.io/smart-fire-site/" target="_blank" rel="noopener">スマートFIRE読者ページ</a></nav>
 </div></footer>
-<script src="app.js"></script></body></html>''')
+<script src="app.js?v={app_version}"></script></body></html>''')
 
 out = "\n".join(parts)
 with open("index.html", "w", encoding="utf-8") as f:
