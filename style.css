@@ -41,3 +41,9 @@ body { background:linear-gradient(145deg,#f7f9f3,#edf3e9 42%,#f6f7ee 78%,#eff4ec
 .cover-wrap::before { background:#dce5d6; }
 footer { color:#f2f6ed; }
 a:focus-visible,button:focus-visible { outline-color:#8a9c78; }
+
+.shelf-subgroup{margin-top:34px}
+.shelf-subgroup:first-of-type{margin-top:0}
+.subgroup-title{font-size:19px;color:var(--green);margin:0 0 16px;padding-left:12px;border-left:3px solid var(--gold)}
+.shelf-subgroup[hidden]{display:none}
+@media(max-width:640px){.subgroup-title{font-size:18px}}

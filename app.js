@@ -14,6 +14,9 @@ filters.forEach((button) => {
         card.hidden = !show;
         if (show) visible += 1;
       });
+      shelf.querySelectorAll('.shelf-subgroup').forEach((group) => {
+        group.hidden = !Array.from(group.querySelectorAll('.book-card')).some((card) => !card.hidden);
+      });
       shelf.hidden = visible === 0;
     });
   });

@@ -14,21 +14,21 @@ esc = lambda value: html.escape(str(value), quote=True)
 
 GOALS = [
     ("publish", "本を出版したい", "書きたい気持ちを、1冊の形にする", "01"),
-    ("learn", "AIを学びたい", "ChatGPTやClaudeの基本をやさしく知る", "02"),
+    ("learn", "AIの基本・使い方を知りたい", "AI入門・情報整理・英語学習・安全な使い方", "02"),
     ("work", "AIを仕事や副業に活かしたい", "AIに仕事を任せ、できることを増やす", "03"),
-    ("create", "画像や動画を作りたい", "画像・漫画・動画・ゲームをAIと作る", "04"),
+    ("create", "画像・動画・ゲームを作りたい", "画像・漫画・動画・ゲームをAIと作る", "04"),
     ("share", "SNS・noteで発信したい", "書くことや発信を小さく始める", "05"),
-    ("skill", "得意を副業にしたい", "占い・英語などの経験を仕事につなげる", "06"),
+    ("skill", "AIで占いを始めたい", "AIを使って占いの仕事を始める", "06"),
     ("life", "働き方や収入を変えたい", "会社だけに頼らない選択肢を持つ", "07"),
 ]
 
 GOAL_BY_ORDER = {
     **{n: "publish" for n in [1, 2, 3, 29]},
-    **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13]},
-    **{n: "work" for n in [6, 8, 9, 30, 34, 36, 39]},
+    **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13, 23, 24, 39]},
+    **{n: "work" for n in [6, 8, 9, 30, 34, 36]},
     **{n: "create" for n in [14, 15, 16, 17, 32, 33, 35, 37]},
     **{n: "share" for n in [18, 19, 31, 38]},
-    **{n: "skill" for n in [20, 21, 22, 23, 24]},
+    **{n: "skill" for n in [20, 21, 22]},
     **{n: "life" for n in [25, 26, 27, 28]},
 }
 
@@ -38,7 +38,7 @@ AUDIENCE = {
     "work": "AIを仕事や副業で使いたい人",
     "create": "AIでものづくりをしたい人",
     "share": "SNSやnoteで発信したい人",
-    "skill": "好きや得意を副業にしたい人",
+    "skill": "AIで占いを始めたい人",
     "life": "働き方と収入を見直したい人",
 }
 
@@ -65,7 +65,7 @@ def card(book):
       <div class="cover-wrap"><img src="{esc(book['cover'])}" alt="{esc(book['title'])} の表紙" loading="lazy"></div>
       <div class="book-copy">
         <p class="book-kicker">こんな人へ</p>
-        <p class="audience">{esc(AUDIENCE[goal])}</p>
+        <p class="audience">{esc({23: "AIで英語を学びたい人", 24: "AIで英語を学びたい人", 39: "AIを安心して使いたい人"}.get(book["order"], AUDIENCE[goal]))}</p>
         <h3>{esc(book['title'])}</h3>
         <p class="outcome"><span>読んだあと</span>{esc(book['blurb'])}</p>
         <span class="amazon">Amazonで見る <b>→</b></span>
@@ -141,10 +141,17 @@ parts.append('''</nav>
 for key, title, subtitle, number in GOALS:
     goal_books = sorted((b for b in books if GOAL_BY_ORDER[b["order"]] == key), key=lambda b: b["order"])
     parts.append(f'''<section id="{key}" class="shelf shelf-{key}" data-goal="{key}"><div class="wrap">
-      <div class="shelf-head"><div><p class="shelf-number">SHELF {number}</p><h2>{esc(title)}</h2><p>{esc(subtitle)}</p></div></div>
-      <div class="book-grid">''')
-    parts.extend(card(book) for book in goal_books)
-    parts.append('</div></div></section>')
+      <div class="shelf-head"><div><p class="shelf-number">SHELF {number}</p><h2>{esc(title)}</h2><p>{esc(subtitle)}</p></div></div>''')
+    if key == "learn":
+        for heading, orders in [("AI入門", [4, 5, 7, 10, 13]), ("資料・メモの整理", [11, 12]), ("英語・TOEIC", [23, 24]), ("安全なAI利用", [39])]:
+            parts.append(f'<div class="shelf-subgroup"><h3 class="subgroup-title">{heading}</h3><div class="book-grid">')
+            parts.extend(card(book) for book in goal_books if book["order"] in orders)
+            parts.append('</div></div>')
+    else:
+        parts.append('<div class="book-grid">')
+        parts.extend(card(book) for book in goal_books)
+        parts.append('</div>')
+    parts.append('</div></section>')
 
 parts.append('''</main>
 <footer><div class="wrap"><p class="footer-brand">あおいの本棚</p><p>あなたの「やってみたい」に、やさしい最初の1冊を。</p>
