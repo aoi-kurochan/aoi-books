@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-10-17",
+  "updated": "2026-10-26",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -518,6 +518,32 @@
       "published": "2026-10-16",
       "visible": true,
       "cover": "covers/39.jpg"
+    },
+    {
+      "order": 40,
+      "title": "PHP脆弱性って、何がそんなに危ないの？",
+      "entry": "AIツールの基本",
+      "pick": null,
+      "top": false,
+      "blurb": "PHPの脆弱性と身近な対策を知る",
+      "url": "https://aoi-kurochan.com/l/u/kbook_42",
+      "asin": "B0HNZ8BNMN",
+      "published": "2026-10-23",
+      "visible": true,
+      "cover": "covers/40.jpg"
+    },
+    {
+      "order": 41,
+      "title": "Jevで文章の「AIっぽさ」を調べてみた！",
+      "entry": "AI副業",
+      "pick": null,
+      "top": false,
+      "blurb": "文章の点検や口コミ分析にJevを使う",
+      "url": "https://aoi-kurochan.com/l/u/kbook_43",
+      "asin": "B0HNZ8NYYH",
+      "published": "2026-10-23",
+      "visible": true,
+      "cover": "covers/41.jpg"
     }
   ]
 }

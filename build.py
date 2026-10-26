@@ -26,8 +26,8 @@ GOALS = [
 
 GOAL_BY_ORDER = {
     **{n: "publish" for n in [1, 2, 3, 29]},
-    **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13, 23, 24, 39]},
-    **{n: "work" for n in [6, 8, 9, 30, 34, 36]},
+    **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13, 23, 24, 39, 40]},
+    **{n: "work" for n in [6, 8, 9, 30, 34, 36, 41]},
     **{n: "create" for n in [14, 15, 16, 17, 32, 33, 35, 37]},
     **{n: "share" for n in [18, 19, 31, 38]},
     **{n: "skill" for n in [20, 21, 22]},
@@ -67,7 +67,7 @@ def card(book):
       <div class="cover-wrap"><img src="{esc(book['cover'])}" alt="{esc(book['title'])} の表紙" loading="lazy"></div>
       <div class="book-copy">
         <p class="book-kicker">こんな人へ</p>
-        <p class="audience">{esc({23: "AIで英語を学びたい人", 24: "AIで英語を学びたい人", 39: "AIを安心して使いたい人"}.get(book["order"], AUDIENCE[goal]))}</p>
+        <p class="audience">{esc({23: "AIで英語を学びたい人", 24: "AIで英語を学びたい人", 39: "AIを安心して使いたい人", 40: "AIやWebを安全に使いたい人"}.get(book["order"], AUDIENCE[goal]))}</p>
         <h3>{esc(book['title'])}</h3>
         <p class="outcome"><span>読んだあと</span>{esc(book['blurb'])}</p>
         <span class="amazon">Amazonで見る <b>→</b></span>
@@ -147,7 +147,7 @@ for key, title, subtitle, number in GOALS:
     parts.append(f'''<section id="{key}" class="shelf shelf-{key}" data-goal="{key}"><div class="wrap">
       <div class="shelf-head"><div><p class="shelf-number">SHELF {number}</p><h2>{esc(title)}</h2><p>{esc(subtitle)}</p></div></div>''')
     if key == "learn":
-        for heading, orders in [("AI入門", [4, 5, 7, 10, 13]), ("資料・メモの整理", [11, 12]), ("英語・TOEIC", [23, 24]), ("安全なAI利用", [39])]:
+        for heading, orders in [("AI入門", [4, 5, 7, 10, 13]), ("資料・メモの整理", [11, 12]), ("英語・TOEIC", [23, 24]), ("安全なAI利用", [39, 40])]:
             parts.append(f'<div class="shelf-subgroup"><h3 class="subgroup-title">{heading}</h3><div class="book-grid">')
             parts.extend(card(book) for book in goal_books if book["order"] in orders)
             parts.append('</div></div>')
