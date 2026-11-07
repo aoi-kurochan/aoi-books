@@ -22,16 +22,18 @@ GOALS = [
     ("share", "SNS・noteで発信したい", "書くことや発信を小さく始める", "05"),
     ("skill", "AIで占いを始めたい", "AIを使って占いの仕事を始める", "06"),
     ("life", "働き方や収入を変えたい", "会社だけに頼らない選択肢を持つ", "07"),
+    ("money", "お金・投資を考えたい", "AIの投資手法を、データで確かめる", "08"),
 ]
 
 GOAL_BY_ORDER = {
     **{n: "publish" for n in [1, 2, 3, 29]},
     **{n: "learn" for n in [4, 5, 7, 10, 11, 12, 13, 23, 24, 39, 40]},
-    **{n: "work" for n in [6, 8, 9, 30, 34, 36, 41]},
+    **{n: "work" for n in [6, 8, 9, 30, 34, 36, 41, 42]},
     **{n: "create" for n in [14, 15, 16, 17, 32, 33, 35, 37]},
     **{n: "share" for n in [18, 19, 31, 38]},
     **{n: "skill" for n in [20, 21, 22]},
-    **{n: "life" for n in [25, 26, 27, 28]},
+    **{n: "life" for n in [25, 26, 27, 28, 43]},
+    44: "money",
 }
 
 AUDIENCE = {
@@ -42,10 +44,11 @@ AUDIENCE = {
     "share": "SNSやnoteで発信したい人",
     "skill": "AIで占いを始めたい人",
     "life": "働き方と収入を見直したい人",
+    "money": "AIと投資について確かめたい人",
 }
 
 # 書名に「ChatGPT」を含まないが、ChatGPTの絞り込みに表示する本
-CHATGPT_EXTRA = {37}
+CHATGPT_EXTRA = {37, 44}
 
 def series_for(book):
     title = book["title"].lower()
@@ -143,7 +146,7 @@ parts.append('''</nav>
 </section>''')
 
 for key, title, subtitle, number in GOALS:
-    goal_books = sorted((b for b in books if GOAL_BY_ORDER[b["order"]] == key), key=lambda b: b["order"])
+    goal_books = sorted((b for b in books if GOAL_BY_ORDER[b["order"]] == key), key=lambda b: 25.5 if b["order"] == 43 else b["order"])
     parts.append(f'''<section id="{key}" class="shelf shelf-{key}" data-goal="{key}"><div class="wrap">
       <div class="shelf-head"><div><p class="shelf-number">SHELF {number}</p><h2>{esc(title)}</h2><p>{esc(subtitle)}</p></div></div>''')
     if key == "learn":

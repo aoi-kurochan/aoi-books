@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-10-26",
+  "updated": "2026-11-07",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -9,7 +9,8 @@
     "note",
     "占い・英語",
     "働き方・FIRE",
-    "AI副業"
+    "AI副業",
+    "お金・投資"
   ],
   "books": [
     {
@@ -544,6 +545,45 @@
       "published": "2026-10-23",
       "visible": true,
       "cover": "covers/41.jpg"
+    },
+    {
+      "order": 42,
+      "title": "AI副業の教科書 ChatGPTで月3万円を最速で稼ぐ方法",
+      "entry": "AI副業",
+      "pick": "最初の1冊",
+      "top": false,
+      "blurb": "ChatGPTで始める副業の選び方と実践例",
+      "url": "https://aoi-kurochan.com/l/u/kbook_33",
+      "asin": "B0F6WD1CQB",
+      "published": "2025-04-30",
+      "visible": true,
+      "cover": "covers/42.jpg"
+    },
+    {
+      "order": 43,
+      "title": "Kindle出版 始めたら6ヶ月でFIREできた私の話 漫画版",
+      "entry": "働き方・FIRE",
+      "pick": "漫画で読む1冊",
+      "top": false,
+      "blurb": "出版からFIREまでの体験を漫画で読む",
+      "url": "https://aoi-kurochan.com/l/u/kbook_44",
+      "asin": "B0HPRRVY1V",
+      "published": "2026-10-29",
+      "visible": true,
+      "cover": "covers/43.jpg"
+    },
+    {
+      "order": 44,
+      "title": "AIで株式投資って、本当に儲かるの？",
+      "entry": "お金・投資",
+      "pick": "最初の1冊",
+      "top": false,
+      "blurb": "日本株の3手法を約9年分のデータで比較",
+      "url": "https://aoi-kurochan.com/l/u/kbook_45",
+      "asin": "B0HQJ3ZWWQ",
+      "published": "2026-11-05",
+      "visible": true,
+      "cover": "covers/44.jpg"
     }
   ]
 }
