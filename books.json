@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-11-07",
+  "updated": "2026-11-16",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -584,6 +584,32 @@
       "published": "2026-11-05",
       "visible": true,
       "cover": "covers/44.jpg"
+    },
+    {
+      "order": 45,
+      "title": "いちばんやさしいMuseの教科書",
+      "entry": "AIツールの基本",
+      "pick": "",
+      "top": false,
+      "blurb": "MetaのAIエージェントMuseで、情報収集や発信などを頼む手順がわかる",
+      "url": "https://www.amazon.co.jp/dp/B0HRKR6N49",
+      "asin": "B0HRKR6N49",
+      "published": "2026-11-13",
+      "visible": true,
+      "cover": "covers/45.jpg"
+    },
+    {
+      "order": 46,
+      "title": "ChatGPTと話して1週間でKindle出版 漫画版",
+      "entry": "Kindle出版",
+      "pick": "",
+      "top": false,
+      "blurb": "ChatGPTと話しながら最初の1冊を形にする流れを、みおの物語でたどる",
+      "url": "https://www.amazon.co.jp/dp/B0HRQYPRTP",
+      "asin": "B0HRQYPRTP",
+      "published": "2026-11-15",
+      "visible": true,
+      "cover": "covers/46.jpg"
     }
   ]
 }
