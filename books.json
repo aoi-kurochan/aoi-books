@@ -1,6 +1,6 @@
 {
   "site": "あおいの本棚",
-  "updated": "2026-11-16",
+  "updated": "2026-11-22",
   "entries": [
     "Kindle出版",
     "Claude活用",
@@ -610,6 +610,19 @@
       "published": "2026-11-15",
       "visible": true,
       "cover": "covers/46.jpg"
+    },
+    {
+      "order": 47,
+      "title": "株価が下がると不安になるのは、あなたのせいじゃない",
+      "entry": "お金・投資",
+      "pick": null,
+      "top": false,
+      "blurb": "値下がりへの不安を生む6つの心のくせと、投資を続けるためのお金と心のしくみを知る",
+      "url": "https://www.amazon.co.jp/dp/B0HS74XHNP",
+      "asin": "B0HS74XHNP",
+      "published": null,
+      "visible": true,
+      "cover": "covers/47.jpg"
     }
   ]
 }

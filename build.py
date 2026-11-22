@@ -34,6 +34,7 @@ GOAL_BY_ORDER = {
     **{n: "skill" for n in [20, 21, 22]},
     **{n: "life" for n in [25, 26, 27, 28, 43]},
     44: "money",
+    47: "money",
 }
 
 AUDIENCE = {
@@ -70,7 +71,7 @@ def card(book):
       <div class="cover-wrap"><img src="{esc(book['cover'])}" alt="{esc(book['title'])} の表紙" loading="lazy"></div>
       <div class="book-copy">
         <p class="book-kicker">こんな人へ</p>
-        <p class="audience">{esc({23: "AIで英語を学びたい人", 24: "AIで英語を学びたい人", 39: "AIを安心して使いたい人", 40: "AIやWebを安全に使いたい人"}.get(book["order"], AUDIENCE[goal]))}</p>
+        <p class="audience">{esc({23: "AIで英語を学びたい人", 24: "AIで英語を学びたい人", 39: "AIを安心して使いたい人", 40: "AIやWebを安全に使いたい人", 47: "値下がりで不安になり、投資の続け方に迷う人"}.get(book["order"], AUDIENCE[goal]))}</p>
         <h3>{esc(book['title'])}</h3>
         <p class="outcome"><span>読んだあと</span>{esc(book['blurb'])}</p>
         <span class="amazon">Amazonで見る <b>→</b></span>
